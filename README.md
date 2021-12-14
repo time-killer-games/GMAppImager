@@ -11,3 +11,4 @@ Convert your GameMaker Studio 2 Linux games into single runtime executables that
 - Click the "releases" link on this page to download pre-built binaries, (in AppImage format).
 - Free online video tutorial available on YouTube: https://www.youtube.com/watch?v=csFavUl1pAA
 - Donations can be made by purchasing from itch.io: https://samuel-venable.itch.io/gmappimager
+- Example game's source code available here: https://samuel-venable.itch.io/key-to-success
