@@ -8,7 +8,6 @@ Convert your GameMaker Studio 2 Linux games into single runtime executables that
 - `GMAppImager-x86_64.AppImage` is for 64-bit-only Intel and AMD based platforms (non-ARM).
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
 - Technically works with non-GM games and software as well if you know what you are doing.
-
-Click the "releases" link on this page to download pre-built binaries.
-
-Online tutorial: https://www.youtube.com/watch?v=csFavUl1pAA
+- Click the "releases" link on this page to download pre-built binaries, (in AppImage format).
+- Free online video tutorial available on YouTube: https://www.youtube.com/watch?v=csFavUl1pAA
+- Donations can be made by purchasing from itch.io: https://samuel-venable.itch.io/gmappimager
