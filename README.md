@@ -10,3 +10,5 @@ Convert your GameMaker Studio 2 Linux games into single runtime executables that
 - Technically works with non-GM games and software as well if you know what you are doing.
 
 Click the "releases" link on this page to download pre-built binaries.
+
+Online tutorial: https://www.youtube.com/watch?v=csFavUl1pAA
