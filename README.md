@@ -1,16 +1,20 @@
 # GMAppImager
 Graphically Converts GameMaker Studio 2 Linux Games to AppImage Bundles.
 
-Convert your GameMaker Studio 2 Linux games into single runtime executables that don't need installation and will run on any modern Linux distribution out of the box. No longer are you limited to Ubuntu 20.04 LTS. Works on any Linux distribution that supports the AppImage format, as this tool converts your game to an AppImage file. Comes with complete "Key to Success" platformer game for demoing purposes. Source code included for everything. Made with GameMaker Studio 2 and the libraries were written in C++. AppImageKit's source available separately from GitHub officially: https://github.com/AppImage/AppImageKit 
+Convert your GameMaker Studio 2 Linux games into single runtime executables that don't need installation and will run on any modern Linux distribution out of the box. As this tool converts your game to an AppImage file, it will run on any Linux distribution that supports the AppImage format and you're thus no longer limited to Ubuntu 20.04 LTS.  
+Comes with complete "Key to Success" platformer game (source code [here](https://samuel-venable.itch.io/key-to-success)) for demoing purposes. Source code included for everything. Made with GameMaker Studio 2 and the libraries were written in C++.  
+AppImageKit's source is available separately on [GitHub](https://github.com/AppImage/AppImageKit).  
+This technically works with non-GM:S games and software as well if you know what you are doing.
 
-- `GMAppImager-aarch64.AppImage` is the file to download for 64-bit ARM distro's, (like Manjaro).
-- `GMAppImager-armhf.AppImage` is the file you want for targeting 32-bit ARM, (such as RPi OS).
-- `GMAppImager-x86_64.AppImage` is for 64-bit-only Intel and AMD based platforms (non-ARM).
+## Downloads
+Click the "[Releases](https://github.com/time-killer-games/GMAppImager/releases)" link on this page to download pre-built binaries, (in AppImage format).  
+A free online video tutorial is available on [YouTube](https://www.youtube.com/watch?v=csFavUl1pAA).
+- `GMAppImager-aarch64.AppImage` is the file to download for 64-bit ARM distro's, (like [Manjaro ARM](https://manjaro.org/download/#ARM)).
+- `GMAppImager-armhf.AppImage` is the file you want for targeting 32-bit ARM, (such as [RPi OS](https://www.raspberrypi.com/software/)).
+- `GMAppImager-x86_64.AppImage` is for 64-bit-only Intel and AMD based platforms.
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
-- Technically works with non-GM games and software as well if you know what you are doing.
-- Click the "releases" link on this page to download pre-built binaries, (in AppImage format).
-- Free online video tutorial available on YouTube: https://www.youtube.com/watch?v=csFavUl1pAA
-- Donations can be made by purchasing from itch.io: https://samuel-venable.itch.io/gmappimager
-- Example game's source code available here: https://samuel-venable.itch.io/key-to-success
 
-Requires being built on Ubuntu 20.04 LTS and zenity needs to be installed with: `sudo apt-get install zenity`
+## Compiling
+Requires being built with Game Maker Studio 2 on Linux and having `zenity` installed. On Ubuntu based distros, you can install it with `sudo apt install zenity`.
+
+Donations can be made by purchasing this from [itch.io](https://samuel-venable.itch.io/gmappimager).
