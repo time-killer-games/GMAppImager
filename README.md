@@ -20,6 +20,8 @@ An online video tutorial is available on [YouTube](https://www.youtube.com/watch
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
 
 ## Compiling
-Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS and having `zenity` installed. On Ubuntu based distros, you can install it with `sudo apt install zenity`. While you can run GameMaker Studio 2 on other Linux distros, it's not supported. 
+Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS and having `zenity` installed. On Ubuntu based distros, you can install it with `sudo apt install zenity`. 
+
+While you can run GameMaker Studio 2 on other Linux distros, it's not supported. 
 
 Donations can be made by purchasing this from [itch.io](https://samuel-venable.itch.io/gmappimager).
