@@ -129,6 +129,9 @@
             2,
           ],"resourceVersion":"1.0","name":"CwdFromProcId","tags":[],"resourceType":"GMExtensionFunction",},
         {"externalName":"DirectoryGetTemporaryPath","kind":1,"help":"DirectoryGetTemporaryPath()","hidden":false,"returnType":1,"argCount":0,"args":[],"resourceVersion":"1.0","name":"DirectoryGetTemporaryPath","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"WindowIdFromNativeWindow","kind":1,"help":"WindowIdFromNativeWindow(window)","hidden":false,"returnType":1,"argCount":0,"args":[
+            1,
+          ],"resourceVersion":"1.0","name":"WindowIdFromNativeWindow","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[
         {"TargetMask":1,"resourceVersion":"1.0","name":"libxprocess.dylib","tags":[],"resourceType":"GMProxyFile",},
         {"TargetMask":7,"resourceVersion":"1.0","name":"libxprocess.so","tags":[],"resourceType":"GMProxyFile",},
@@ -175,6 +178,7 @@
         {"name":"ProcInfoFromProcId","path":"extensions/libxprocess/libxprocess.yy",},
         {"name":"ExeFromProcId","path":"extensions/libxprocess/libxprocess.yy",},
         {"name":"CwdFromProcId","path":"extensions/libxprocess/libxprocess.yy",},
+        {"name":"WindowIdFromNativeWindow","path":"extensions/libxprocess/libxprocess.yy",},
       ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"libxprocess.zip","origname":"","init":"","final":"","kind":4,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":0,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
     {"filename":"libxprocess.gml","origname":"","init":"libxprocess_init","final":"","kind":2,"uncompress":false,"functions":[
