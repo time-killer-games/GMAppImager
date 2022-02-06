@@ -1,8 +1,7 @@
-widget_set_owner(hwnd_main);
-widget_set_icon(program_directory + "assets/icon.png");
-environment_set_variable("OWD", "HOME");
-string_split_list = ds_list_create();
+DialogSetFontFolder(working_directory + "cmdlineutil/fonts/");
+DialogSetFontSize(18);
 
+string_split_list = ds_list_create();
 blacklist = @'ld-linux.so.2
 ld-linux-armhf.so.3
 ld-linux-x86-64.so.2
@@ -90,11 +89,11 @@ uname = ProcessExecute("uname -m"); unameoutput = ExecutedProcessReadFromStandar
 if (unameoutput == "i386") { systemfolder = "i386-linux-gnu"; } else if (unameoutput == "x86_64") { systemfolder = "x86_64-linux-gnu"; }
 else if (unameoutput == "armhf") { systemfolder = "arm-linux-gnueabihf"; }else if (unameoutput == "aarch64") { systemfolder = "aarch64-linux-gnu"; }
 FreeExecutedProcessStandardOutput(uname); FreeExecutedProcessStandardInput(uname);
-e = get_open_filename_ext("Unix Executables (*)|*", "", environment_get_variable("OWD"), "Select Linux GameMaker Game Unix Executable...");
+e = GetOpenFileName("Executable (*.elf)|*.elf", "", environment_get_variable("HOME"), "Select Linux GameMaker Game Unix Executable...");
 if (e == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
-icon = get_open_filename_ext("256x256px PNG Icon Files (*.png)|*.png", "", environment_get_variable("OWD"), "Select Linux 256x256px AppImage PNG Icon File...");
+icon = GetOpenFileName("PNG Icon (*.png)|*.png", "", environment_get_variable("HOME"), "Select Linux 64x64px AppImage PNG Icon File...");
 if (icon == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
-d = get_directory_alt("Select Linux GameMaker Game Assets Directory...", environment_get_variable("OWD"));
+d = GetDirectory(environment_get_variable("HOME"), "Select Linux GameMaker Game Assets Directory...");
 if (d == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 while (string_last_pos("/", d) == string_length(d) && d != "/") { d = string_copy(d, 0, string_length(d) - 1) }
 s = 0; p[s] = ProcessExecute("ldd \"" + e + "\"");
@@ -124,7 +123,7 @@ for (s = 0; s < array_length(p); s++) {
     }
   }
 }
-f[s] = directory_contents_first(d, "*.so", false, true);
+f[s] = directory_contents_first(d, "*.so;*.elf", false, true);
 while (f[s] != "") {
   p[s++] = ProcessExecute("ldd \"" + f[s] + "\"");
   for (s = 0; s < array_length(p); s++) {
@@ -168,7 +167,7 @@ execute_program("sed", "-i -e 's#/usr#././#g' \"" + environment_get_variable("HO
 execute_program("chmod", "777 \"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/usr/bin/executable\"", true);
 execute_program(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/appimagetool.AppImage", "\"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir\" \"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage\"", true);
 execute_program("chmod", "777 \"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage\"", true);
-o = get_save_filename_ext("AppImage Executable (*.AppImage)|*.AppImage", "Untitled.AppImage", environment_get_variable("OWD"), "Save As");
+o = GetSaveFileName("AppImage (*.AppImage)|*.AppImage", "Untitled.AppImage", environment_get_variable("HOME"), "Export GameMaker AppImage...");
 if (o == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 file_copy(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage", o);
 directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name);
