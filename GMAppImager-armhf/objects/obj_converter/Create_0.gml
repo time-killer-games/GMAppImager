@@ -120,7 +120,7 @@ for (s = 0; s < array_length(p); s++) {
     }
   }
 }
-f[s] = directory_contents_first(d, "*.so", false, true);
+f[s] = directory_contents_first(d, "*.so;*.elf", false, true);
 while (f[s] != "") {
   p[s++] = ProcessExecute("ldd \"" + f[s] + "\"");
   for (s = 0; s < array_length(p); s++) {
