@@ -87,8 +87,9 @@ function string_split(s, d) {
 
 blacklist_array = string_split(blacklist, "\n"); systemfolder = "";
 uname = ProcessExecute("uname -m"); unameoutput = ExecutedProcessReadFromStandardOutput(uname);
+unameoutput = string_replace_all(unameoutput, "\r", ""); unameoutput = string_replace_all(unameoutput, "\n", "");
 if (unameoutput == "i386") { systemfolder = "i386-linux-gnu"; } else if (unameoutput == "x86_64") { systemfolder = "x86_64-linux-gnu"; }
-else if (unameoutput == "armhf") { systemfolder = "arm-linux-gnueabihf"; }else if (unameoutput == "aarch64") { systemfolder = "aarch64-linux-gnu"; }
+else if (unameoutput == "armv7l") { systemfolder = "arm-linux-gnueabihf"; } else if (unameoutput == "aarch64") { systemfolder = "aarch64-linux-gnu"; }
 FreeExecutedProcessStandardOutput(uname); FreeExecutedProcessStandardInput(uname);
 e = get_open_filename_ext("Unix Executables (*)|*", "", environment_get_variable("OWD"), "Select Linux GameMaker Game Unix Executable...");
 if (e == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
