@@ -85,7 +85,7 @@ function string_split(s, d) {
   return rw;
 }
 
-blacklist_array = string_split(blacklist, "\n");
+ok = true; blacklist_array = string_split(blacklist, "\n");
 e = get_open_filename_ext("Unix Executables (*)|*", "", environment_get_variable("OWD"), "Select Linux GameMaker Game Unix Executable...");
 if (e == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 icon = get_open_filename_ext("256x256px PNG Icon Files (*.png)|*.png", "", environment_get_variable("OWD"), "Select Linux 256x256px AppImage PNG Icon File...");
@@ -102,25 +102,27 @@ for (s = 0; s < array_length(p); s++) {
       if (j == 0) {
         b[j] = string_copy(b[j], 2, string_length(b[j]));
         if (filename_path(b[j]) == "/lib64/" || filename_path(b[j]) == "/lib/") {
-          file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
           for (t = 0; t < array_length(blacklist_array); t++) {
             if (filename_name(b[j]) == blacklist_array[t]) {
-              file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
+              ok = false;
             }
           }
+          if (ok) file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
+          ok = true;
         }
       } else if (j == 2) {
-        file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
         for (t = 0; t < array_length(blacklist_array); t++) {
           if (filename_name(b[j]) == blacklist_array[t]) {
-            file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+            ok = false;
           }
         }
+        if (ok) file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+        ok = true;
       }
     }
   }
 }
-f[s] = directory_contents_first(d, "*.so;*.elf", false, true);
+ok = true; f[s] = directory_contents_first(d, "*.so;*.elf", false, true);
 while (f[s] != "") {
   p[s++] = ProcessExecute("ldd \"" + f[s] + "\"");
   for (s = 0; s < array_length(p); s++) {
@@ -131,20 +133,22 @@ while (f[s] != "") {
         if (j == 0) {
           b[j] = string_copy(b[j], 2, string_length(b[j]));
           if (filename_path(b[j]) == "/lib64/" || filename_path(b[j]) == "/lib/") {
-            file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
             for (t = 0; t < array_length(blacklist_array); t++) {
               if (filename_name(b[j]) == blacklist_array[t]) {
-                file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
+                ok = false;
               }
-            }  
+            }
+            if (ok) file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
+            ok = true;
           }
         } else if (j == 2) {
-          file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
           for (t = 0; t < array_length(blacklist_array); t++) {
             if (filename_name(b[j]) == blacklist_array[t]) {
-              file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+              ok = false;
             }
           }
+          if (ok) file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+          ok = true;
         } 
       }
     }
