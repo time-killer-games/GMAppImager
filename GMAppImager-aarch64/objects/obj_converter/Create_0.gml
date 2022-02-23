@@ -85,7 +85,12 @@ function string_split(s, d) {
   return rw;
 }
 
-blacklist_array = string_split(blacklist, "\n");
+blacklist_array = string_split(blacklist, "\n"); systemfolder = "";
+uname = ProcessExecute("uname -m"); unameoutput = ExecutedProcessReadFromStandardOutput(uname);
+unameoutput = string_replace_all(unameoutput, "\r", ""); unameoutput = string_replace_all(unameoutput, "\n", "");
+if (unameoutput == "i386") { systemfolder = "i386-linux-gnu"; } else if (unameoutput == "x86_64") { systemfolder = "x86_64-linux-gnu"; }
+else if (unameoutput == "armv7l") { systemfolder = "arm-linux-gnueabihf"; } else if (unameoutput == "aarch64") { systemfolder = "aarch64-linux-gnu"; }
+FreeExecutedProcessStandardOutput(uname); FreeExecutedProcessStandardInput(uname);
 e = get_open_filename_ext("Unix Executables (*)|*", "", environment_get_variable("OWD"), "Select Linux GameMaker Game Unix Executable...");
 if (e == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 icon = get_open_filename_ext("256x256px PNG Icon Files (*.png)|*.png", "", environment_get_variable("OWD"), "Select Linux 256x256px AppImage PNG Icon File...");
@@ -104,16 +109,16 @@ for (s = 0; s < array_length(p); s++) {
 		if (filename_path(b[j]) == "/lib64/" || filename_path(b[j]) == "/lib/") {
           file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
           for (t = 0; t < array_length(blacklist_array); t++) {
-            if (string_count(blacklist_array[t], b[j]) > 0) {
+            if (filename_name(b[j]) == blacklist_array[t]) {
               file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
 			}
 		  }
 		}
       } else if (j == 2) {
-        file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+        file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
         for (t = 0; t < array_length(blacklist_array); t++) {
-          if (string_count(blacklist_array[t], b[j]) > 0) {
-		    file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+          if (filename_name(b[j]) == blacklist_array[t]) {
+		    file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
 		  }
 		}
       }
@@ -133,16 +138,16 @@ while (f[s] != "") {
 		  if (filename_path(b[j]) == "/lib64/" || filename_path(b[j]) == "/lib/") {
             file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
             for (t = 0; t < array_length(blacklist_array); t++) {
-              if (string_count(blacklist_array[t], b[j]) > 0) {
+              if (filename_name(b[j]) == blacklist_array[t]) {
                 file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir" + b[j]);
 			  }
 			}  
 		  }
         } else if (j == 2) {
-          file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+          file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
           for (t = 0; t < array_length(blacklist_array); t++) {
-            if (string_count(blacklist_array[t], b[j]) > 0) {
-		      file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + filename_name(b[j]));
+            if (filename_name(b[j]) == blacklist_array[t]) {
+		      file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
 		    }
 		  }
         } 
