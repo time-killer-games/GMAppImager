@@ -24,7 +24,7 @@ Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS and having `zen
 
 On Ubuntu based distros, you can install zenity with `sudo apt install zenity`. 
 
-If KWin is your Window Manager (which is likely if you are running in KDE), use kdialog instead.
+If KWin is your Window Manager, (which is likely if you are running in KDE), use kdialog instead.
 
 On Ubuntu based distros, you can install kdialog with `sudo apt install kdialog`.
 
