@@ -106,7 +106,7 @@ for (s = 0; s < array_length(p); s++) {
       if (j == 2) {
         file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
         for (t = 0; t < array_length(blacklist_array); t++) {
-          if (filename_name(b[j]) == blacklist_array[t]) {
+          if (string_count(filename_name(b[j]), blacklist_array[t]) > 0) {
             file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
           }
         }
@@ -125,7 +125,7 @@ while (f[s] != "") {
         if (j == 2) {
           file_copy(b[j], environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
           for (t = 0; t < array_length(blacklist_array); t++) {
-            if (filename_name(b[j]) == blacklist_array[t]) {
+            if (string_count(filename_name(b[j]), blacklist_array[t]) > 0) {
               file_delete(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir/lib/" + systemfolder + "/" + filename_name(b[j]));
             }
           }
