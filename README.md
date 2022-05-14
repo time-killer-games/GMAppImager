@@ -7,7 +7,7 @@ Comes with complete "Key to Success" platformer game, (source code [here](https:
 
 AppImageKit's source is available separately on [GitHub](https://github.com/AppImage/AppImageKit).
 
-This technically works with games and software not created with GameMaker as well if you know what you are doing. 
+This works with games and software not created with GameMaker as well if you know what you are doing. 
 
 ## Downloads
 Click the "[Releases](https://github.com/time-killer-games/GMAppImager/releases)" link on this page to download pre-built binaries, (in AppImage format). 
