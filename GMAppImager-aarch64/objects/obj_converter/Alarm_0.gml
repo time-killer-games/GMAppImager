@@ -1,5 +1,5 @@
 DialogSetFontSize(24);
-DialogSetFontFolder(program_directory + "assets/fonts");
+DialogSetFontFolder(program_directory + "assets");
 DialogSetWindowSize(800, 400);
 string_split_list = ds_list_create();
 blacklist = @'ld-linux.so.2
@@ -157,6 +157,9 @@ ds_list_destroy(string_split_list);
 FreeExecutedProcessStandardOutput(p);
 FreeExecutedProcessStandardInput(p);
 game_end();
+
+
+
 
 
 

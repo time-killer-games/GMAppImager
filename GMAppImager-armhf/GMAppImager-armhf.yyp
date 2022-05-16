@@ -1,8 +1,10 @@
 {
   "resources": [
     {"id":{"name":"obj_converter","path":"objects/obj_converter/obj_converter.yy",},"order":0,},
+    {"id":{"name":"scr_FileDialogs","path":"scripts/scr_FileDialogs/scr_FileDialogs.yy",},"order":0,},
     {"id":{"name":"libfilesystem","path":"extensions/libfilesystem/libfilesystem.yy",},"order":2,},
     {"id":{"name":"rm_converter","path":"rooms/rm_converter/rm_converter.yy",},"order":0,},
+    {"id":{"name":"libfiledialogs","path":"extensions/libfiledialogs/libfiledialogs.yy",},"order":3,},
     {"id":{"name":"libxprocess","path":"extensions/libxprocess/libxprocess.yy",},"order":0,},
   ],
   "Options": [
@@ -41,6 +43,7 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts.yy","order":15,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
