@@ -20,12 +20,6 @@ An online video tutorial is available on [YouTube](https://www.youtube.com/watch
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
 
 ## Compiling
-Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS and having `zenity` installed. 
+Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS. 
 
-On Ubuntu based distros, you can install zenity with `sudo apt install zenity`. 
-
-If KWin is your Window Manager, (which is likely if you are running KDE), install `kdialog` instead.
-
-On Ubuntu based distros, you can install kdialog with `sudo apt install kdialog`.
-
-While you can run GameMaker Studio 2 on other Linux distros, it's not technically supported. 
+The output AppImage will run on most distro's that support AppImage format.
