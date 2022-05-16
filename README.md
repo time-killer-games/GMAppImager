@@ -20,6 +20,6 @@ An online video tutorial is available on [YouTube](https://www.youtube.com/watch
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
 
 ## Compiling
-Requires being built with GameMaker Studio 2 on Ubuntu 20.04 LTS. 
+GMAppImager requires being run on Ubuntu 20.04 LTS while converting your executable. 
 
 The output AppImage will run on most distro's that support AppImage format.
