@@ -42,8 +42,8 @@
         {"externalName":"ifd_load_fonts","kind":1,"help":"IfdLoadFonts()","hidden":false,"returnType":2,"argCount":0,"args":[],"resourceVersion":"1.0","name":"IfdLoadFonts","tags":[],"resourceType":"GMExtensionFunction",},
       ],"constants":[],"ProxyFiles":[
         {"TargetMask":1,"resourceVersion":"1.0","name":"libfiledialogs.dylib","tags":[],"resourceType":"GMProxyFile",},
-        {"TargetMask":7,"resourceVersion":"1.0","name":"libfiledialogs.so","tags":[],"resourceType":"GMProxyFile",},
         {"TargetMask":7,"resourceVersion":"1.0","name":"libfiledialogs_arm64.so","tags":[],"resourceType":"GMProxyFile",},
+        {"TargetMask":7,"resourceVersion":"1.0","name":"libfiledialogs.so","tags":[],"resourceType":"GMProxyFile",},
       ],"copyToTargets":194,"order":[
         {"name":"GetOpenFileName","path":"extensions/libfiledialogs/libfiledialogs.yy",},
         {"name":"GetOpenFileNames","path":"extensions/libfiledialogs/libfiledialogs.yy",},

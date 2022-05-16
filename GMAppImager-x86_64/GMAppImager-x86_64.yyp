@@ -216,6 +216,8 @@
     {"CopyToMask":-1,"filePath":"datafiles/fonts","resourceVersion":"1.0","name":"077-NotoSansMandaic-Regular.ttf","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/fonts","resourceVersion":"1.0","name":"107-NotoSansOriya-Regular.ttf","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/fonts","resourceVersion":"1.0","name":"147-NotoSansTifinagh-Regular.ttf","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"NotoSans-Regular.ttf","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"LICENSE","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.300.0.499",
