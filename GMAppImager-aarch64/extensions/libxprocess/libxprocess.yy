@@ -279,7 +279,7 @@
   "tvosCocoaPodDependencies": "",
   "parent": {
     "name": "Extensions",
-    "path": "folders/ArtCompanion/Extensions.yy",
+    "path": "folders/Extensions.yy",
   },
   "resourceVersion": "1.2",
   "name": "libxprocess",
