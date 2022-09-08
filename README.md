@@ -16,7 +16,7 @@ An online video tutorial is available on [YouTube](https://www.youtube.com/watch
 
 - `GMAppImager-aarch64.AppImage` is the file to download for 64-bit ARM distro's, (like [Manjaro ARM](https://manjaro.org/download/#ARM)).
 - `GMAppImager-armhf.AppImage` is the file you want for targeting 32-bit ARM, (such as [RPi OS](https://www.raspberrypi.com/software/)).
-- `GMAppImager-x86_64.AppImage` is for 64-bit-only Intel and AMD based platforms.
+- `GMAppImager-x86_64.AppImage` is for 64-bit-only Intel and AMD based platforms, (non-ARM).
 - `Key.to.Success-*.AppImage` is an example game compiled for the architecture listed in its name.
 
 ## Compiling
