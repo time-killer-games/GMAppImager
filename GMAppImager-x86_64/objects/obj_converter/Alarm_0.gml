@@ -91,11 +91,11 @@ if (unameoutput == "i386") { systemfolder = "i386-linux-gnu"; } else if (unameou
 else if (unameoutput == "armv7l") { systemfolder = "arm-linux-gnueabihf"; } else if (unameoutput == "aarch64") { systemfolder = "aarch64-linux-gnu"; }
 FreeExecutedProcessStandardOutput(uname); FreeExecutedProcessStandardInput(uname);
 e = GetOpenFileName("Unix Executables (*)", "", environment_get_variable("HOME"), "Select Linux GameMaker Game Unix Executable...");
-if (e == "" || e == "(null)") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
+if (e == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 icon = GetOpenFileName("PNG Icon Files (*.png)|*.png", "", environment_get_variable("HOME"), "Select Linux AppImage PNG Icon File...");
-if (icon == "" || icon == "(null)") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
+if (icon == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 d = GetDirectory("Select Linux GameMaker Game Assets Directory...", environment_get_variable("HOME"));
-if (d == "" || d == "(null)") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
+if (d == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 while (string_last_pos("/", d) == string_length(d) && d != "/") { d = string_copy(d, 0, string_length(d) - 1) }
 s = 0; p[s] = ProcessExecute("ldd \"" + e + "\"");
 for (s = 0; s < array_length(p); s++) {
@@ -149,7 +149,7 @@ execute_program("chmod", "777 \"" + environment_get_variable("HOME") + "/.config
 execute_program(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/appimagetool.AppImage", "\"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppDir\" \"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage\"", true);
 execute_program("chmod", "777 \"" + environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage\"", true);
 o = GetSaveFileName("AppImage Executable (*.AppImage)|*.AppImage", "Untitled.AppImage", environment_get_variable("HOME"), "Save As");
-if (o == "" || o == "(null)") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
+if (o == "") { directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name); game_end(); exit; }
 file_copy(environment_get_variable("HOME") + "/.config/" + game_display_name + "/assets/Application.AppImage", o);
 directory_destroy(environment_get_variable("HOME") + "/.config/" + game_display_name);
 execute_program("chmod", "777 \"" + o + "\"", true);

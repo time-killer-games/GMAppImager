@@ -1,5 +1,5 @@
 function DialogSetFontFolder(lpParentFolder) {
-	var bResult = bool(environment_set_variable("IMGUI_FONT_PATH", lpParentFolder)); IfdLoadFonts(); return bResult;
+	return bool(environment_set_variable("IMGUI_FONT_PATH", lpParentFolder));
 }
 
 function DialogSetFontSize(dwSize) {
