@@ -1,6 +1,8 @@
 # GMAppImager
 Graphically Converts GameMaker Studio 2 Linux Games to AppImage Bundles.
 
+![wsl.png](https://github.com/time-killer-games/GMAppImager/blob/main/wsl.png?raw=true)
+
 Convert your GameMaker Studio 2 Linux games into single runtime executables that don't need installation and will run on any modern Linux distribution out of the box. As this tool converts your game to an AppImage file, it will run on any Linux distribution that supports the AppImage format and you're thus no longer limited to Ubuntu 22.04 LTS. 
 
 Comes with complete "Key to Success" platformer game, (source code [here](https://samuel-venable.itch.io/key-to-success)), for demoing purposes. Source code included for everything. Made with GameMaker Studio 2 and the libraries were written in C++. 
