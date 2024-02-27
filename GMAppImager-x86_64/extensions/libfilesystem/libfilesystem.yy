@@ -18,7 +18,7 @@
   "exportToGame": true,
   "extensionVersion": "1.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libfilesystem.dll","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"working_directory","hidden":false,"value":"directory_get_current_working()",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"program_directory","hidden":false,"value":"executable_get_directory()",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"temp_directory","hidden":false,"value":"directory_get_temporary_path()",},
@@ -464,8 +464,8 @@
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libfilesystem_arm64.so","TargetMask":7,},
         {"resourceType":"GMProxyFile","resourceVersion":"1.0","name":"libfilesystem.so","TargetMask":7,},
       ],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":0,"filename":"libfilesystem.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\libfilesystem.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":194,"filename":"libfilesystem.gml","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libfilesystem.zip","constants":[],"copyToTargets":0,"filename":"libfilesystem.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\libfilesystem.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libfilesystem.gml","constants":[],"copyToTargets":194,"filename":"libfilesystem.gml","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"generate_working_directory","argCount":0,"args":[],"documentation":"","externalName":"generate_working_directory","help":"","hidden":false,"kind":2,"returnType":1,},
       ],"init":"generate_working_directory","kind":2,"order":[
         {"name":"generate_working_directory","path":"extensions/libfilesystem/libfilesystem.yy",},
