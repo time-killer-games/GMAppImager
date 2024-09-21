@@ -152,6 +152,7 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"SetBufferLimitForStandardOutput","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"SetBufferLimitForStandardOutput","help":"SetBufferLimitForStandardOutput(limit)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"CurrentProcessReadFromStandardInput","argCount":0,"args":[],"documentation":"","externalName":"CurrentProcessReadFromStandardInput","help":"CurrentProcessReadFromStandardInput()","hidden":false,"kind":1,"returnType":1,},
       ],"init":"","kind":1,"order":[
         {"name":"ProcessExecute","path":"extensions/libxprocess/libxprocess.yy",},
         {"name":"ProcessExecuteAsync","path":"extensions/libxprocess/libxprocess.yy",},
